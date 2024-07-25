@@ -1,0 +1,21 @@
+server:
+  port: 8103
+
+spring:
+  application:
+    name: ms-payment
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/ms_payment
+    username: postgres
+    password: admin
+
+  jpa:
+    open-in-view: false
+    show-sql: true
+
+  liquibase:
+    change-log: classpath:liquibase/changelog-master.yml
+
+ms-order-client:
+  url: http://localhost:8102
